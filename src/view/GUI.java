@@ -5,6 +5,7 @@
  */
 package view;
 
+import controller.ControlPairs;
 import controller.WordPairControlInterface;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -237,6 +238,8 @@ public class GUI extends javax.swing.JFrame {
         control.add(jTextFieldAddDanish.getText(), jTextFieldAddEnglish.getText());
         jTextFieldAddDanish.setText("");
         jTextFieldAddEnglish.setText("");
+        control.save(ControlPairs.FILE_PATH);
+        control.load(ControlPairs.FILE_PATH);
     }//GEN-LAST:event_jButtonAddPairActionPerformed
 
     private void jButtonCheckAnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCheckAnswerActionPerformed

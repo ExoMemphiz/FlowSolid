@@ -29,8 +29,8 @@ public class ControlPairsTest {
         wpc.add("bingo", "bango");
         wpc.add("hest", "horse");
         wpc.add("datamat", "computer");
-        assertTrue(wpc.size() != 0);
-        System.out.println("HEJ");
+        assertTrue("" + wpc.size(), wpc.size() != 0);
+        System.out.println("" + wpc.size());
         
     }
     

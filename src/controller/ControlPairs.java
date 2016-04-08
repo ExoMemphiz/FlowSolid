@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
  */
 public class ControlPairs implements WordPairControlInterface {
 
-    private String FILE_PATH = "pairs.txt";
+    public static String FILE_PATH = "pairs.txt";
     
     private ArrayList<WordPair> pairs = new ArrayList<>();
     private ArrayList<WordPair> newlyAdded = new ArrayList<>();
@@ -50,8 +50,6 @@ public class ControlPairs implements WordPairControlInterface {
         WordPair pair = new WordPair(data);
         pairs.add(pair);
         newlyAdded.add(pair);
-        save(FILE_PATH);
-        load(FILE_PATH);
     }
 
     @Override
