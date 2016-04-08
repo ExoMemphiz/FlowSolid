@@ -28,6 +28,12 @@ public class ControlPairs implements WordPairControlInterface {
     private Random r;
     private int successRate, totalGuesses;
     
+    public ControlPairs(boolean loadFromFile) {
+        if (loadFromFile){
+            load(FILE_PATH);
+        }
+        r = new Random();
+    }
     public ControlPairs() {
         r = new Random();
         load(FILE_PATH);
@@ -137,7 +143,7 @@ public class ControlPairs implements WordPairControlInterface {
 
     @Override
     public void clear() {
-        JOptionPane.showMessageDialog(null, "Why are you calling this? Stop it. Leave my memory alone.");
+        pairs.clear();
     }
     
 }

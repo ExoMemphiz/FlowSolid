@@ -17,24 +17,26 @@ import static org.junit.Assert.*;
  * @author CHRIS
  */
 public class ControlPairsTest {
+    private WordPairControlInterface wpc;
     
     public ControlPairsTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
+    }    
     
     @Before
     public void setUp() {
+        wpc = new ControlPairs(false);
+        wpc.clear();
+        wpc.add("bingo", "bango");
+        wpc.add("hest", "horse");
+        wpc.add("datamat", "computer");
+        assertTrue(wpc.size() != 0);
+        System.out.println("HEJ");
+        
     }
     
     @After
     public void tearDown() {
+        wpc.clear();
     }
 
     /**
@@ -42,13 +44,13 @@ public class ControlPairsTest {
      */
     @Test
     public void testAdd() {
-        System.out.println("add");
-        String question = "";
-        String answer = "";
-        ControlPairs instance = new ControlPairs();
-        instance.add(question, answer);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("testAdd");
+        assertTrue(wpc.size() == 3);
+        String danish = "ko";
+        String english = "hund";
+        wpc.add(danish, english);
+        assertTrue(wpc.size() == 4);
+        wpc.clear();
     }
 
     /**
