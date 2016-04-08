@@ -6,6 +6,8 @@
 package view;
 
 import controller.WordPairControlInterface;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,8 +26,14 @@ public class GUI extends javax.swing.JFrame {
         this.control = control;
         initComponents();
         setVisible(true);
+        setLocationMiddle();
     }
 
+    public void setLocationMiddle() {
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
