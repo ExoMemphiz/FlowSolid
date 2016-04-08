@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  *
  * @author Chris
  */
-public class ControlPairs implements  WordPairControlInterface {
+public class ControlPairs implements WordPairControlInterface {
 
     private String FILE_PATH = "pairs.txt";
     
@@ -28,7 +28,7 @@ public class ControlPairs implements  WordPairControlInterface {
     private Random r;
     private int successRate, totalGuesses;
     
-    public ControlPairs() throws IOException {
+    public ControlPairs() {
         r = new Random();
         load(FILE_PATH);
     }
