@@ -5,6 +5,7 @@
  */
 package controller;
 
+import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -59,12 +60,9 @@ public class ControlPairsTest {
     @Test
     public void testSize() {
         System.out.println("size");
-        ControlPairs instance = new ControlPairs();
-        int expResult = 0;
-        int result = instance.size();
+        int expResult = 3;
+        int result = wpc.size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -73,42 +71,18 @@ public class ControlPairsTest {
     @Test
     public void testGetRandomQuestion() {
         System.out.println("getRandomQuestion");
-        ControlPairs instance = new ControlPairs();
-        String expResult = "";
-        String result = instance.getRandomQuestion();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String result = wpc.getRandomQuestion();
+        assertNotNull(result);
     }
 
-    /**
-     * Test of getDifficultyRating method, of class ControlPairs.
-     */
-    @Test
-    public void testGetDifficultyRating() {
-        System.out.println("getDifficultyRating");
-        ControlPairs instance = new ControlPairs();
-        double expResult = 0.0;
-        double result = instance.getDifficultyRating();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of checkGuess method, of class ControlPairs.
-     */
+  
     @Test
     public void testCheckGuess() {
         System.out.println("checkGuess");
-        String question = "";
-        String guess = "";
-        ControlPairs instance = new ControlPairs();
-        boolean expResult = false;
-        boolean result = instance.checkGuess(question, guess);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String question = "bingo";
+        String guess = "bango";
+        boolean result = wpc.checkGuess(question, guess);
+        assertTrue(result);
     }
 
     /**
@@ -117,55 +91,10 @@ public class ControlPairsTest {
     @Test
     public void testLookup() {
         System.out.println("lookup");
-        String question = "";
-        ControlPairs instance = new ControlPairs();
-        String expResult = "";
-        String result = instance.lookup(question);
+        String question = "bingo";
+        String expResult = "bango";
+        String result = wpc.lookup(question);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of load method, of class ControlPairs.
-     */
-    @Test
-    public void testLoad() {
-        System.out.println("load");
-        String filename = "";
-        ControlPairs instance = new ControlPairs();
-        boolean expResult = false;
-        boolean result = instance.load(filename);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of save method, of class ControlPairs.
-     */
-    @Test
-    public void testSave() {
-        System.out.println("save");
-        String filename = "";
-        ControlPairs instance = new ControlPairs();
-        boolean expResult = false;
-        boolean result = instance.save(filename);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of clear method, of class ControlPairs.
-     */
-    @Test
-    public void testClear() {
-        System.out.println("clear");
-        ControlPairs instance = new ControlPairs();
-        instance.clear();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
