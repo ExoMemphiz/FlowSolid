@@ -21,10 +21,3 @@ Forventer,Expecting,0.71
 Nøgle,Key,0.29
 Mig,Me,0.17
 a,a,0.0
-bingo,bango,0.38
-hest,horse,0.33
-datamat,computer,0.58
-bingo,bango,0.38
-bingo,bango,0.38
-bingo,bango,0.38
-bingo,bango,0.38

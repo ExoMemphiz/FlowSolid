@@ -236,10 +236,10 @@ public class GUI extends javax.swing.JFrame {
 
     private void jButtonAddPairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddPairActionPerformed
         control.add(jTextFieldAddDanish.getText(), jTextFieldAddEnglish.getText());
-        jTextFieldAddDanish.setText("");
-        jTextFieldAddEnglish.setText("");
         control.save(ControlPairs.FILE_PATH);
         control.load(ControlPairs.FILE_PATH);
+        jTextFieldAddDanish.setText("");
+        jTextFieldAddEnglish.setText("");
     }//GEN-LAST:event_jButtonAddPairActionPerformed
 
     private void jButtonCheckAnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCheckAnswerActionPerformed
